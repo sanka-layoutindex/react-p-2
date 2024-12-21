@@ -1,0 +1,26 @@
+.slider2{
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+
+    .card{
+        background-color: $primaryColor;
+        @include fontDmSans;
+        text-align: center;
+    
+        
+
+        .label{
+            font-size: #{$font13}rem;
+            color: $secondaryColor;
+        }
+
+        .day{
+            font-size: #{$font22}rem;
+        }
+
+        .month{
+            font-size: #{$font13}rem;
+            font-size: $font13;
+        }
+    }
+}

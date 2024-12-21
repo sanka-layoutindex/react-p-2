@@ -1,0 +1,35 @@
+.paddingGlobal {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+    width: -webkit-fill-available;
+    width: -webkit-fill-available;
+    width: stretch;
+    width: -moz-available;
+    overflow: hidden;
+    @include responsiveToUp(lg) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    @include responsiveToUp(md) {
+      // padding-left: 0.5rem;
+      // padding-right: 0.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    &.overFlow {
+      overflow: initial;
+    }
+    &.paddingGlobalZero {
+      @include responsiveToUp(md) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+
+  .sectionMd {
+    padding-top: #{$space32}rem;
+    padding-bottom: #{$space32}rem;
+  }

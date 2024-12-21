@@ -1,0 +1,64 @@
+.movieCards {
+  .movie-card {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+  }
+
+  .performance-times {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .card {
+    background-color: transparent;
+    position: relative;
+
+    .card-title {
+      @include fontAlexussHeavy;
+      color: $primaryColor;
+      font-size: #{$font36}rem;
+    }
+
+    .movie-duration {
+      color: $primaryColor;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .movie-content {
+      @include fontInter;
+      color: $primaryColor;
+      line-height: 1.75rem;
+    }
+
+    .buttons{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .playBtn{
+            display: flex;
+            background-color: $primaryColor;
+            border-radius: 2.5rem;
+            color: $secondaryColor;
+            padding: 6px 16px 6px 6px !important;
+        }
+
+        .moreBtn{
+            @include fontInter;
+            border-radius: 10px;
+            color: $primaryColor;
+            border: 2px solid $primaryColor;
+            padding: 10px 15px !important;
+        }
+    }
+  }
+}

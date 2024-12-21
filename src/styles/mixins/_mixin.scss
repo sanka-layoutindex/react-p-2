@@ -1,0 +1,22 @@
+@mixin fontInter{
+    font-family: "Inter", serif !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@mixin fontDmSans{
+    font-family: "DM Sans", serif !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@mixin fontEurostile{
+    font-family: "Eurostile", serif !important;
+}
+
+@mixin fontAlexussHeavy{
+    font-family: "AlexussHeavy", serif !important;
+}
+
+
+

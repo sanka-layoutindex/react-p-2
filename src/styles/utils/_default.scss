@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+@font-face {
+  font-family: "Eurostile";
+  src: url("../../assets/fonts/Eurostile\ Bold\ Extended.otf");
+
+  font-weight: normal;
+  font-style: normal;
+//   font-display: swap;
+}
+
+@font-face {
+  font-family: "AlexussHeavy";
+  src: url("../../assets/fonts/alexhev.ttf");
+
+  font-weight: normal;
+  font-style: normal;
+//   font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html,
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color: $secondaryColor;
+  font-size: #{$baseFontSize}px;
+
+}
+
+a,
+a:active,
+a:hover,
+a:focus {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+//text
+.textUpper {
+  text-transform: uppercase;
+}

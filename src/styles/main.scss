@@ -1,0 +1,27 @@
+// Variables
+@import "variables/colors";
+@import "variables/numbers";
+
+// Mixins
+@import "mixins/breakpoints";
+@import "mixins/mixin";
+
+// utils
+
+@import "utils/default";
+@import "utils/typography";
+@import "utils/space";
+
+// components
+
+@import "components/slider1";
+@import "components/sliderdates";
+@import "components/moviecard";
+
+// modules
+
+@import "modules/header";
+
+// pages
+
+@import "pages/homepage"

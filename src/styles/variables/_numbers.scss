@@ -1,0 +1,43 @@
+$baseFontSize: 16;
+
+// font size
+
+$font64: calc(64 / 16);
+$font56: calc(56 / 16);
+$font54: calc(56 / 16);
+$font48: calc(48 / 16);
+$font40: calc(40 / 16);
+$font38: calc(38 / 16);
+$font36: calc(36 / 16);
+$font28: calc(28 / 16);
+$font26: calc(26 / 16);
+$font24: calc(24 / 16);
+$font22: calc(22 / 16);
+$font20: calc(20 / 16);
+$font18: calc(18 / 16);
+$font16: calc(16 / 16);
+$font14: calc(14 / 16);
+$font13: calc(13 / 16);
+$font12: calc(12 / 16);
+$font10: calc(10 / 16);
+
+// spaces
+$space96: calc(96 / 16);
+$space64: calc(64 / 16);
+$space32: calc(32 / 16);
+$space24: calc(24 / 16);
+$space20: calc(20 / 16);
+$space16: calc(16 / 16);
+$space12: calc(12 / 16);
+$space10: calc(10 / 16);
+
+// brakepoint
+$breackpoints: (
+  xs: 0,
+  sm: 375px,
+  md: 768px,
+  lg: 1050px,
+  xl: 1280px,
+  xxl: 1440px,
+  xxxl: 1600px,
+) !default;

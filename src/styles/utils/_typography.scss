@@ -1,0 +1,64 @@
+// headers
+
+h2 {
+  font-size: #{$font64}rem !important;
+}
+
+h3 {
+  font-size: #{$font36}rem !important;
+}
+
+// font weights
+.fw900 {
+  font-weight: 900 !important;
+}
+.fw800 {
+  font-weight: 800 !important;
+}
+.fw700 {
+  font-weight: 700 !important;
+}
+.fw600 {
+  font-weight: 600 !important;
+}
+.fw500 {
+  font-weight: 500 !important;
+}
+.fw400 {
+  font-weight: 400 !important;
+}
+.fw300 {
+  font-weight: 300 !important;
+}
+.fw200 {
+  font-weight: 200 !important;
+}
+.fw100 {
+  font-weight: 100 !important;
+}
+
+// font sizes
+
+.textLarge {
+  font-size: #{$font54}rem !important;
+}
+
+.textMedium {
+  font-size: #{$font18}rem !important;
+}
+.textNormal {
+  font-size: #{$font16}rem !important;
+}
+.textSmall {
+  font-size: #{$font14}rem !important;
+}
+
+// font color
+
+.fcPrimary {
+  color: $primaryColor !important;
+}
+
+.fcBlack {
+  color: $secondaryColor;
+}
