@@ -1,35 +1,68 @@
 .paddingGlobal {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    width: 100%;
-    width: -webkit-fill-available;
-    width: -webkit-fill-available;
-    width: stretch;
-    width: -moz-available;
-    overflow: hidden;
-    @include responsiveToUp(lg) {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  width: -webkit-fill-available;
+  width: -webkit-fill-available;
+  width: stretch;
+  width: -moz-available;
+  overflow: hidden;
+  @include responsiveToUp(lg) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include responsiveToUp(md) {
+    // padding-left: 0.5rem;
+    // padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  &.overFlow {
+    overflow: initial;
+  }
+  &.paddingGlobalZero {
     @include responsiveToUp(md) {
-      // padding-left: 0.5rem;
-      // padding-right: 0.5rem;
       padding-left: 1rem;
       padding-right: 1rem;
-    }
-    &.overFlow {
-      overflow: initial;
-    }
-    &.paddingGlobalZero {
-      @include responsiveToUp(md) {
-        padding-left: 0;
-        padding-right: 0;
-      }
     }
   }
+}
 
+.containerLarge {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  @include responsiveToUp(xxxl) {
+    max-width: 80rem;
+  }
+  @include responsiveToUp(xxl) {
+    max-width: 75rem;
+  }
+  @include responsiveToUp(xl) {
+    max-width: 75rem;
+  }
+  @include responsiveToUp(lg) {
+    max-width: 65rem;
+  }
+}
 
-  .sectionMd {
+.sectionMd {
+  padding-top: #{$space32}rem;
+  padding-bottom: #{$space32}rem;
+
+  @include responsiveToUp(md){
+    padding-top: #{$space16}rem;
+    padding-bottom: #{$space16}rem;
+  }
+}
+
+.sectionLarge{
+  padding-top: #{$space96}rem;
+  padding-bottom: #{$space96}rem;
+
+  @include responsiveToUp(lg){
     padding-top: #{$space32}rem;
     padding-bottom: #{$space32}rem;
   }
+}

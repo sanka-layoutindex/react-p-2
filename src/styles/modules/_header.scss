@@ -5,6 +5,19 @@
     display: grid;
     grid-template-columns: 4fr 8fr;
 
+    @include responsiveToUp(lg) {
+      grid-template-columns: 1fr 1fr;
+
+    }
+
+    .navbar{
+      justify-content: flex-end;
+
+      .navbar-toggler-icon{
+        filter: invert(100%);
+      }
+    }
+
     .logo {
         padding: #{$space12}rem 0;
 

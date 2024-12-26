@@ -2,17 +2,38 @@
   .movie-card {
     display: grid;
     grid-template-columns: 8fr 4fr;
+
+    @include responsiveToUp(lg){
+      grid-template-columns: 1fr;
+    }
   }
 
   .performance-times {
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+
+    @include responsiveToUp(lg){
+      margin-top: 1rem;
+      justify-content: flex-start;
+    }
   }
 
   .card {
     background-color: transparent;
     position: relative;
+    margin-bottom: 0;
+    padding: 1.5rem 0;
+
+    .cardWrapper{
+      display: flex;
+      gap: 2rem;
+
+      @include responsiveToUp(md){
+        display: block;
+      }
+
+    }
 
     .card-title {
       @include fontAlexussHeavy;
@@ -25,18 +46,38 @@
       display: flex;
       align-items: center;
       gap: 10px;
+
+
+      .rating{
+        @include fontInter;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primaryColor;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 5rem;
+        color: $black2;
+      }
     }
 
     .card-body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      padding: 0 1.5rem;
+
+      @include responsiveToUp(md){
+        padding: 1rem 0;
+      }
+  
     }
 
     .movie-content {
       @include fontInter;
       color: $primaryColor;
       line-height: 1.75rem;
+
     }
 
     .buttons{
@@ -44,12 +85,31 @@
         align-items: center;
         gap: 1rem;
 
+        @include responsiveToUp(md){
+          margin-top: 1rem;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
         .playBtn{
+          @include fontSatoshi;
             display: flex;
             background-color: $primaryColor;
             border-radius: 2.5rem;
+            gap: 0.5rem;
             color: $secondaryColor;
             padding: 6px 16px 6px 6px !important;
+
+            .iconWrapper{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 1.6rem;
+              width: 1.6rem;
+              background-color: $red1;
+              border-radius: 3rem;
+              color: $primaryColor;
+            }
         }
 
         .moreBtn{

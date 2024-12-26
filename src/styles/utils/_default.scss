@@ -12,9 +12,18 @@
 
 @font-face {
   font-family: "AlexussHeavy";
-  src: url("../../assets/fonts/alexhev.ttf");
+  src: url("../../assets/fonts/Alexuss\ Heavy\ Regular.ttf");
 
-  font-weight: normal;
+  font-weight: bold;
+  font-style: normal;
+//   font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../assets/fonts/Satoshi-Bold.woff");
+
+  font-weight: bold;
   font-style: normal;
 //   font-display: swap;
 }

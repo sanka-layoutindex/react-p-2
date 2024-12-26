@@ -2,7 +2,11 @@ import React from "react";
 import HeaderSection from "../modules/HeaderSection";
 import Slider from "../common/Slider";
 import SliderDate from "../common/SliderDate";
-import MovieList from "../common/MovieCard";
+import MovieCards from "../modules/MovieCards";
+import MovieSection from "../modules/MovieSection";
+import VerticalSection from "../modules/VerticalCards";
+import FooterSection from "../modules/FooterSection";
+
 
 function Home() {
   return (
@@ -10,13 +14,16 @@ function Home() {
       <HeaderSection />
       <Slider />
       <div className="mainContent paddingGlobal">
-        <div className="left">
+        <div className="left paddingGlobal">
           <SliderDate></SliderDate>
-          <MovieList></MovieList>
+          <MovieCards></MovieCards>
+          <MovieSection></MovieSection>
         </div>
-        <div className="right">
+        <div className="right paddingGlobal">
+          <VerticalSection></VerticalSection>
         </div>
       </div>
+      <FooterSection/>
     </>
   );
 }

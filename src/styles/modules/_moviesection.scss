@@ -1,0 +1,35 @@
+
+.movie-section{
+
+    .titleWrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        @include responsiveToUp(md){
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        a{
+            @include fontInter;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .movies-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+
+        @include responsiveToUp(lg){
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        @include responsiveToUp(md){
+            grid-template-columns: 1fr;
+        }
+    }
+}

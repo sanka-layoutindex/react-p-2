@@ -1,0 +1,72 @@
+.swiper-slide:has(.ratioImageWrapper) {
+    display: flex;
+  }
+  
+  .ratioImageWrapper {
+    position: relative;
+    // width: 100%;
+
+    &.ratio_1_1 {
+      padding-top: 100%;
+    }
+    &.ratio_4_3 {
+      padding-top: 75%;
+    }
+    &.ratio_3_2 {
+      padding-top: 66.67%;
+    }
+    &.ratio_16_9 {
+      padding-top: 56.25%;
+    }
+    &.ratio_21_9 {
+      padding-top: 42.85%;
+    }
+    &.Ratio_poster {
+      // padding-top: 148%;
+      padding-top: 133%;
+    }
+    &.ratio_3_4 {
+    }
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      inset: 0;
+      object-fit: cover;
+    }
+    &.freeSize {
+      height: 100%;
+      width: 100%;
+      @include responsiveToUp(md) {
+        height: auto;
+      }
+      &.h100 {
+        @include responsiveToUp(md) {
+          height: 100%;
+        }
+      }
+      img {
+        position: unset;
+        height: 100%;
+        width: 100%;
+        inset: unset;
+        object-fit: cover;
+      }
+    }
+    &.ratio_16_9_free_lg {
+      @include responsiveToUp(xl) {
+        height: 100%;
+        width: 100%;
+  
+        padding: 0;
+        img {
+          position: unset;
+          height: 100%;
+          width: 100%;
+          inset: unset;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  

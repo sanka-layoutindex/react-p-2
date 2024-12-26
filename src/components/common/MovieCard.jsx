@@ -8,8 +8,8 @@ import gloria from "../../assets/images/gloria.png";
 
 const MovieCard = ({ movie }) => {
   return (
-    <Card className="mb-4 movie-card">
-      <div className="d-flex">
+    <Card className="movie-card">
+      <div className="cardWrapper">
         <div className="imageWrapper">
           <img src={movie.poster} alt={movie.title} className="movie-poster" />
         </div>
@@ -28,10 +28,10 @@ const MovieCard = ({ movie }) => {
                 fill="currentColor"
               />
             </svg>
-            <div className="duration">{movie.duration}</div>|
-            <div className="rating">{movie.rating}</div>
+            <div className="duration textSmall">{movie.duration}</div>|
+            <div className="rating fw700 textSmall">{movie.rating}</div>
           </div>
-          <Card.Text className="movie-content">
+          <Card.Text className="movie-content textNormal">
             Directed by {movie.director}
             <br />
             Starring {movie.cast.join(", ")}
@@ -57,12 +57,12 @@ const MovieCard = ({ movie }) => {
               </div>
               Play Trailer
             </a>
-            <a className="moreBtn" href="/more">More Performances</a>
+            <a className="moreBtn fw700" href="/more">More Performances</a>
           </div>
         </Card.Body>
       </div>
 
-      <div className="performance-times mt-3">
+      <div className="performance-times">
         {movie.performances.map((time, index) => (
           <Button
             key={index}

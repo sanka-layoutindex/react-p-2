@@ -1,26 +1,170 @@
-.slider2{
-    display: grid;
-    grid-template-columns: 10fr 2fr;
+.slider2 {
+  display: grid;
+  grid-template-columns: 10fr 2fr;
 
-    .card{
-        background-color: $primaryColor;
-        @include fontDmSans;
-        text-align: center;
-    
-        
+  @include responsiveToUp(md){
+    display: block;
+  }
 
-        .label{
-            font-size: #{$font13}rem;
-            color: $secondaryColor;
-        }
+  .card {
+    background-color: $primaryColor;
+    @include fontDmSans;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
 
-        .day{
-            font-size: #{$font22}rem;
-        }
-
-        .month{
-            font-size: #{$font13}rem;
-            font-size: $font13;
-        }
+    &:hover{
+        background-color: $yellow1 !important;
     }
+
+    &:hover .label,  &:hover .day, &:hover .month{
+        color: $white1;
+    }
+
+    .label {
+      font-size: #{$font13}rem;
+      color: $secondaryColor;
+    }
+
+    .day {
+      font-size: #{$font22}rem;
+    }
+
+    .month {
+      font-size: #{$font13}rem;
+    }
+  }
+
+  .swiper{
+    width: 80%;
+
+    @include responsiveToUp(lg){
+      width: 80%;
+    }
+    @include responsiveToUp(md){
+      width: 75%;
+    }
+   
+  }
+
+  .prev{
+    height: 4.313rem;
+    width: 4.313rem;
+    background-color: $primaryColor;
+    border-radius: 5rem;
+    border: none;
+    outline: none;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include responsiveToUp(lg) {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+  .next{
+    height: 4.313rem;
+    width: 4.313rem;
+    background-color: $primaryColor;
+    border-radius: 5rem;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include responsiveToUp(lg) {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  .calender{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include responsiveToUp(md){
+      margin-top: 1rem;
+    }
+
+    // background-color: white;
+
+    .MuiFormControl-root{
+      min-width: unset !important;
+      outline: none;
+       
+      input{
+        display: none !important;
+      }
+      label{
+        display: none;
+      }
+    
+      .MuiInputAdornment-root{
+        width: 4rem !important;
+        height: 4rem !important;
+        max-height: unset !important;
+    
+    
+        .MuiOutlinedInput-notchedOutline{
+          padding: 0!important;
+          outline: none;
+        }
+
+        MuiOutlinedInput-root{
+          padding: 0 !important;
+             outline: none;
+        }
+    
+        button{
+          height: 4rem;
+          width: 4rem;
+          border: 2px solid $primaryColor;
+          border-radius: 0.5rem;
+        }
+    
+        svg{
+          color: $primaryColor;
+          width: 100%;
+          height: 4rem;
+        }
+      }
+    }
+    
+  }
 }
+
+
+
+
+
+
+
+.day {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
+  min-height: 0;
+  min-width: 0;
+  position: relative;
+//   padding: 0 5.056rem;
+
+  .swiper-slide {
+    width: auto;
+    flex-shrink: 0;
+    display: block;
+    height: 100%;
+    max-height: 100%;
+    .swiper-wrapper {
+      max-height: 100%;
+      height: 100%;
+      display: flex;
+    }
+  }
+}
+
