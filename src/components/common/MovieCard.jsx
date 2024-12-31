@@ -5,13 +5,14 @@ import Button from "react-bootstrap/Button";
 import asteroid from "../../assets/images/asteroidCity.png";
 import blackDynamite from "../../assets/images/blackDynamite.png";
 import gloria from "../../assets/images/gloria.png";
+import rideLone from "../../assets/images/rideLone.png";
 
 const MovieCard = ({ movie }) => {
   return (
     <Card className="movie-card">
       <div className="cardWrapper">
         <div className="imageWrapper">
-          <img src={movie.poster} alt={movie.title} className="movie-poster" />
+          <img src={movie.poster} alt={movie.title} className="movie-poster w-100" />
         </div>
         <Card.Body>
           <Card.Title>{movie.title}</Card.Title>
@@ -63,17 +64,51 @@ const MovieCard = ({ movie }) => {
       </div>
 
       <div className="performance-times">
-        {movie.performances.map((time, index) => (
+        <div>
+        {movie.performances.map((performance, index) => (
           <Button
             key={index}
-            variant={time.isSoldOut ? "outline-danger" : "outline-success"}
             size="sm"
-            disabled={time.isSoldOut}
-            className="me-2"
+            className="me-2 intro fw700 textSmall"
           >
-            {time.label}
+            {performance.label}
           </Button>
         ))}
+        </div>
+        <div>
+        {movie.qualities?.map((qualitie, index) => (
+          <Button
+            key={index}
+            size="sm"
+            className="me-2 intro fw700 textSmall"
+          >
+            {qualitie.label}   
+          </Button>
+        ))}
+        </div>
+        <div>
+        {movie.lenses?.map((lense, index) => (
+          <Button
+            key={index}
+            variant={lense.isSoldOut ? "out" : "intro"}
+            size="sm"
+            className="me-2 intro fw700 textSmall"
+          >
+            {lense.label}   
+          </Button>
+        ))}
+        </div>
+        <div>
+        {movie.times?.map((time, index) => (
+          <Button
+            key={index}
+            size="sm"
+            className="me-2 color fw700 textSmall"
+          >
+            {time.label}   
+          </Button>
+        ))}
+        </div>
       </div>
     </Card>
   );
@@ -92,7 +127,15 @@ const MovieList = () => {
       poster: asteroid,
       performances: [
         { label: "4K | Intro", isSoldOut: false },
+      ],
+      qualities: [
+        { label: "4K", isSoldOut: false },
+      ],
+      lenses: [
         { label: "35mm", isSoldOut: false },
+        { label: "35mm", isSoldOut: false },
+      ],
+      times: [
         { label: "3:30 PM", isSoldOut: false },
       ],
     },
@@ -106,8 +149,19 @@ const MovieList = () => {
       year: "1980",
       poster: gloria,
       performances: [
-        { label: "Sold out", isSoldOut: true },
+     
+      ],
+      qualities: [
+        { label: "4K", isSoldOut: false },
+      ],
+      lenses: [
+        { label: "sold out", isSoldOut: true },
         { label: "35mm", isSoldOut: false },
+        { label: "35mm", isSoldOut: false },
+      ],
+      times: [
+        { label: "3:30 PM", isSoldOut: false },
+        { label: "3:30 PM", isSoldOut: false },
         { label: "3:30 PM", isSoldOut: false },
       ],
     },
@@ -120,6 +174,20 @@ const MovieList = () => {
       country: "USA",
       year: "2009",
       poster: blackDynamite,
+      performances: [
+        { label: "4K | Intro", isSoldOut: false },
+        { label: "3:30 PM", isSoldOut: false },
+      ],
+    },
+    {
+      title: "Ride Lonesome",
+      duration: "1h 25m",
+      rating: "12A",
+      director: "Budd Boetticher",
+      cast: ["Randolph Scott", "Karen Steele", "Pernell Roberts"],
+      country: "USA",
+      year: "1959",
+      poster: rideLone,
       performances: [
         { label: "4K | Intro", isSoldOut: false },
         { label: "3:30 PM", isSoldOut: false },

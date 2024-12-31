@@ -1,5 +1,8 @@
+// large Screens
+
 .headerSection {
   @include fontInter;
+  overflow: visible;
 
   .containerSm {
     display: grid;
@@ -20,6 +23,8 @@
 
     .logo {
         padding: #{$space12}rem 0;
+        display: flex;
+        align-items: center;
 
     }
 
@@ -59,6 +64,7 @@
             position: relative;
 
             .basket-cart{
+              color: $primaryColor;
               position: absolute;
               top: -0.8rem;
               right: -0.7rem;
@@ -105,6 +111,11 @@
             height: 1px;
             opacity: 0.5;
           }
+
+          .dropdown-menu{
+            background-color: $primaryColor;
+            padding: 0.5rem !important;
+          }
         }
 
         .nav-link{ 
@@ -112,6 +123,11 @@
           font-weight: 500;
           padding: 0.5rem 1rem !important;
           border-radius: 6.25rem;
+
+          @include responsiveToUp(xxl) {
+            padding: 0.5rem 0.7rem !important;
+      
+          }
       
         }
 
@@ -121,5 +137,113 @@
         }
       }
     }
+  }
+}
+
+
+// mobile navbar
+
+.offcanvas {
+
+  .topNav{
+    padding: #{$space16}rem 0;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 1rem;
+    position: relative;
+
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: $primaryColor;
+      width: 80%;
+      height: 1px;
+      opacity: 0.5;
+    }
+
+    a{
+      color: $secondaryColor;
+      font-size: $font14;
+      font-weight: 500;
+    }
+
+    .iconWrapper{
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      position: relative;
+ 
+
+      .basket-cart{
+
+        position: absolute;
+        top: -0.8rem;
+        right: -0.7rem;
+        background: $red1;
+        border-radius: 50%;
+        height: 1.2rem;
+        width: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    input[type="search" i] {
+      width: 19rem;
+      background-color: $secondaryColor;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      border: none;
+      color: $primaryColor;
+      background-image: url(../../assets/images/search.png);
+      background-position: 0 1.2rem; 
+      background-repeat: no-repeat;
+  
+      &:focus-visible{
+        outline: none !important;
+      }
+    }
+  }
+
+  input[type="search" i] {
+    background-color: $secondaryColor;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: $primaryColor;
+    background-image: url(../../assets/images/search.png);
+    background-position: 0 1.2rem; 
+    background-repeat: no-repeat;
+
+    &:focus-visible{
+      outline: none !important;
+    }
+  }
+
+  a{
+    color: $secondaryColor;
+    font-size: $font16;
+    font-weight: 500;
+  }
+
+  .nav-link{ 
+    color: $secondaryColor;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: 6.25rem;
+
+  }
+
+  .nav-link.active{
+    background-color: $primaryColor;
+    color: $secondaryColor;
+  }
+
+  .dropdown-menu{
+    background-color: $primaryColor;
+    padding: 0.5rem !important;
   }
 }

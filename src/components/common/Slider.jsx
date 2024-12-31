@@ -11,8 +11,8 @@ function Slider() {
   return (
     <div className="paddingGlobal sectionMd slider1">
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        <SwiperSlide> <img className="img-fluid" src={sliderimg1} alt="slider img" /></SwiperSlide>
-        <SwiperSlide> <img className="img-fluid" src={sliderimg1} alt="slider img" /></SwiperSlide>
+        <SwiperSlide className="ratioImageWrapper ratio_21_9"> <img className="w-100" src={sliderimg1} alt="slider img" /></SwiperSlide>
+        <SwiperSlide className="ratioImageWrapper ratio_21_9"> <img className="w-100" src={sliderimg1} alt="slider img" /></SwiperSlide>
       </Swiper>
     </div>
   );

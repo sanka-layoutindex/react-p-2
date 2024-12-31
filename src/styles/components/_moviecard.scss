@@ -1,7 +1,7 @@
 .movieCards {
   .movie-card {
     display: grid;
-    grid-template-columns: 8fr 4fr;
+    grid-template-columns: 9fr 3fr;
 
     @include responsiveToUp(lg){
       grid-template-columns: 1fr;
@@ -16,6 +16,12 @@
     @include responsiveToUp(lg){
       margin-top: 1rem;
       justify-content: flex-start;
+    }
+
+    div{
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
   }
 
@@ -120,5 +126,39 @@
             padding: 10px 15px !important;
         }
     }
+  }
+
+  .intro{
+    background-color: transparent ;
+    border: 1px solid $primaryColor;
+    color: $primaryColor;
+    border-radius: 1rem;
+    transition: 0.5s ease-in-out;
+    padding: 0.5rem 0.6rem;
+
+    &:hover{
+   background-color: transparent ;
+
+    }
+  }
+
+  .color{
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    border-radius: 1rem;
+    padding: 0.5rem 0.6rem;
+    border: none;
+
+    &:hover{
+      background-color: $primaryColor;
+    }
+
+    
+  }
+
+  .btn-out{
+    background-color: $grey1 !important;
+    color: $white1 !important;
+    border: none !important;
   }
 }

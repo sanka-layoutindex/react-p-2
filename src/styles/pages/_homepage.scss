@@ -1,9 +1,35 @@
-.mainContent{
+.main-section{
+  background-image: url(../../assets/images/homeBackground.jfif) !important;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+
+  .mainContent {
     display: grid;
     grid-template-columns: 9fr 3fr;
-
+  
     @include responsiveToUp(lg) {
-        display: contents;
-    
+      display: contents;
+    }
+  
+    .left {
+      padding-right: 2rem;
+  
+      @include responsiveToUp(lg){
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
       }
+    }
+  
+    .right {
+      padding-left: 2rem;
+  
+      @include responsiveToUp(lg){
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      } 
+    }
+  }
+  
+
 }

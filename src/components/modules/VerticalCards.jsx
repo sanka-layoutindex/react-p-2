@@ -34,7 +34,7 @@ const VerticalSection = () => {
     <div className="vertical-section">
       {verticalCards.map((card) => (
         <a key={card.id} href={card.link} className="vertical-card">
-          <img src={card.image} alt={card.title} className="card-image img-fluid" />
+          <img src={card.image} alt={card.title} className="card-image w-100" />
         </a>
       ))}
     </div>

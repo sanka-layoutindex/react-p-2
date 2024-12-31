@@ -32,11 +32,11 @@ const MovieSection = () => {
 
       <div className="movies-grid">
         {movies.map((movie) => (
-          <div key={movie.id} className="movie-card">
+          <div key={movie.id} className="movie-card ratioImageWrapper Ratio_poster">
             <img
               src={movie.poster}
               alt={movie.title}
-              className="movie-poster Ratio_poster"
+              className="movie-poster"
             />
           </div>
         ))}
