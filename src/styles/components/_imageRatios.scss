@@ -21,9 +21,12 @@
     &.ratio_21_9 {
       padding-top: 42.85%;
     }
+    &.ratio_21_8 {
+      padding-top: 35%;
+    }
     &.Ratio_poster {
-      // padding-top: 148%;
-      padding-top: 133%;
+      padding-top: 148% !important;
+      // padding-top: 133%;
     }
     &.ratio_3_4 {
     }
@@ -32,7 +35,7 @@
       height: 100%;
       width: 100%;
       inset: 0;
-      object-fit: fill;
+      object-fit: cover;
     }
     &.freeSize {
       height: 100%;

@@ -4,7 +4,7 @@
   @include fontInter;
   overflow: visible;
 
-  .containerSm {
+  .gridSection {
     display: grid;
     grid-template-columns: 4fr 8fr;
 
@@ -14,6 +14,7 @@
     }
 
     .navbar{
+      --bs-navbar-padding-y: 0;
       justify-content: flex-end;
 
       .navbar-toggler-icon{
@@ -45,7 +46,7 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            background-color: $primaryColor;
+            background-color: rgba(255, 255, 255, 0.3);
             width: 80%;
             height: 1px;
             opacity: 0.5;
@@ -53,8 +54,13 @@
 
           a{
             color: $primaryColor;
-            font-size: $font14;
+            font-size: #{$font14}rem;
             font-weight: 500;
+            transition: 0.5s ease-in-out;
+
+            &:hover{
+              color: $yellow1;
+            }
           }
 
           .iconWrapper{
@@ -79,14 +85,16 @@
           }
 
           input[type="search" i] {
+            @include fontSatoshi;
+            font-size: #{$font14}rem;
             width: 19rem;
             background-color: $secondaryColor;
-            padding: 0.75rem 1rem;
-            border-radius: 0.5rem;
+            padding: 0.75rem 1rem 0.75rem 2rem;
+            border-radius: 4px;
             border: none;
             color: $primaryColor;
             background-image: url(../../assets/images/search.png);
-            background-position: 0 1.2rem; 
+            background-position: 0.75rem 1.1rem; 
             background-repeat: no-repeat;
         
             &:focus-visible{
@@ -106,7 +114,7 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            background-color: $primaryColor;
+            background-color: rgba(255, 255, 255, 0.3);
             width: 90%;
             height: 1px;
             opacity: 0.5;
@@ -114,20 +122,39 @@
 
           .dropdown-menu{
             background-color: $primaryColor;
-            padding: 0.5rem !important;
+            padding: 0!important;
+            overflow: hidden;
+          
+
+            .dropdown-item{
+              padding: 0.5rem !important;
+              transition: 0.5s ease-in-out;
+
+              &:hover{
+                background-color: $yellow1;
+                color: $primaryColor;
+              }
+            }
           }
         }
 
         .nav-link{ 
           color: $primaryColor;
           font-weight: 500;
-          padding: 0.5rem 1rem !important;
+          padding: 0.375rem 1rem !important;
           border-radius: 6.25rem;
+          transition: 0.5s ease-in-out;
+          line-height: 1.5rem;
+
+          &:hover{
+            color: $yellow1;
+          }
 
           @include responsiveToUp(xxl) {
             padding: 0.5rem 0.7rem !important;
       
           }
+
       
         }
 
@@ -136,6 +163,7 @@
           color: $secondaryColor;
         }
       }
+
     }
   }
 }
@@ -165,7 +193,7 @@
 
     a{
       color: $secondaryColor;
-      font-size: $font14;
+      font-size: #{$font14}rem;
       font-weight: 500;
     }
 
@@ -225,7 +253,7 @@
 
   a{
     color: $secondaryColor;
-    font-size: $font16;
+    font-size: #{$font16}rem;
     font-weight: 500;
   }
 

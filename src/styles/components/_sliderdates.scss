@@ -48,6 +48,10 @@
    
   }
 
+  .swiper-button-disabled{
+    opacity: 0.8;
+  }
+
   .prev{
     height: 4.313rem;
     width: 4.313rem;
@@ -96,7 +100,9 @@
 
     .MuiFormControl-root{
       min-width: unset !important;
-      outline: none;
+      outline: none !important;
+      border: none !important;
+      box-shadow: none !important;
        
       input{
         display: none !important;
@@ -104,18 +110,19 @@
       label{
         display: none;
       }
+
+      .MuiOutlinedInput-notchedOutline{
+        padding: 0!important;
+        outline: none;
+        border: none !important;
+        box-shadow: none;
+      }
     
       .MuiInputAdornment-root{
         width: 4rem !important;
         height: 4rem !important;
         max-height: unset !important;
     
-    
-        .MuiOutlinedInput-notchedOutline{
-          padding: 0!important;
-          outline: none;
-        }
-
         MuiOutlinedInput-root{
           padding: 0 !important;
              outline: none;

@@ -13,14 +13,18 @@ function Home() {
       <section className="main-section">
         <HeaderSection />
         <Slider />
-        <div className="mainContent paddingGlobal">
-          <div className="left">
-            <SliderDate></SliderDate>
-            <MovieCards></MovieCards>
-            <MovieSection></MovieSection>
-          </div>
-          <div className="right">
-            <VerticalSection></VerticalSection>
+        <div className="paddingGlobal">
+          <div className="containerMedium">
+            <div className="mainContent">
+              <div className="left">
+                <SliderDate></SliderDate>
+                <MovieCards></MovieCards>
+                <MovieSection></MovieSection>
+              </div>
+              <div className="right">
+                <VerticalSection></VerticalSection>
+              </div>
+            </div>
           </div>
         </div>
       </section>

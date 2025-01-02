@@ -1,6 +1,7 @@
 .footerSection {
   background-color: $black2;
   padding-top: 6rem;
+  padding-bottom: 3rem;
   @include fontInter;
 
   @include responsiveToUp(lg){
@@ -10,7 +11,7 @@
   .content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
     padding-bottom: 4rem;
 
     @include responsiveToUp(lg){
@@ -43,13 +44,23 @@
         border-radius: 2rem;
         width: 2rem;
         height: 2rem;
+        color: $white1;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+
+        &:hover{
+          color: $yellow1;
+          border: 1px solid $yellow1;
+        }
+
+
       }
     }
 
     .emailList {
       li {
         color: $white1;
-        font-size: $font16;
+        font-size: #{$font16}rem;
         margin-bottom: 0.25rem;
       }
     }
@@ -64,7 +75,7 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
 
         p {
           opacity: 50%;
@@ -95,7 +106,7 @@
       input[type="text" i] {
         background-color: $secondaryColor;
         padding: 0.75rem;
-        border-radius: 0.5rem;
+        border-radius: 4px;
         border: none;
         color: $white1;
 
@@ -107,7 +118,7 @@
       input[type="email" i] {
         background-color: $secondaryColor;
         padding: 0.75rem;
-        border-radius: 0.5rem;
+        border-radius: 4px;
         border: none;
         color: $white1;
         width: 100%;
@@ -117,19 +128,6 @@
         }
       }
 
-      input[type="submit" i] {
-        background-color: $purple1;
-        padding: 0.75rem 1.4rem;
-        border-radius: 0.75rem;
-        color: $white1;
-        font-size: $font16;
-
-        border: none;
-
-        @include responsiveToUp(md) {
-          padding: 0.75rem 1rem;
-        }
-      }
     }
 
     .links{
@@ -143,8 +141,9 @@
 
           a{
             color: $white1;
-            font-size: $font16;
+            font-size: #{$font16}rem;
             opacity: 0.5;
+            font-weight: 300;
            
             transition: 0.5s ease-in-out;
 
@@ -159,7 +158,7 @@
   }
 
   .copyright{
-    padding: 1.5rem 1.5rem 0 1.5rem;
+    padding: 1.5rem;
     display: flex;
     justify-content: space-between;
     background-color: $grey1;

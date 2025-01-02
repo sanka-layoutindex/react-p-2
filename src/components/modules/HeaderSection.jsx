@@ -15,7 +15,8 @@ function HeaderSection() {
   return (
     <>
       <div className="paddingGlobal headerSection">
-        <div className="containerSm">
+        <div className="containerMedium">
+        <div className="gridSection">
           <div className="logo">
             <a className="imageWrapper" href="/home">
               <img className="img-fluid" src={logo} alt="logo" />
@@ -161,6 +162,7 @@ function HeaderSection() {
               </Navbar.Offcanvas>
             </Navbar>
           </div>
+        </div>
         </div>
       </div>
     </>

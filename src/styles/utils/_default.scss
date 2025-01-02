@@ -71,3 +71,32 @@ ul {
 .textUpper {
   text-transform: uppercase;
 }
+
+// button for movie cards
+.cardButton{
+  min-height: 2.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+}
+
+// button for submit
+
+.submitButton {
+  background-color: $purple1;
+  padding: 0.75rem 1.4rem;
+  border-radius: 0.5rem;
+  color: $white1;
+  font-size: #{$font16}rem;
+  border: none;
+  transition: 0.5s ease-in-out;
+
+  &:hover{
+    background-color: $yellow1;
+  }
+
+  @include responsiveToUp(md) {
+    padding: 0.75rem 1rem;
+  }
+}

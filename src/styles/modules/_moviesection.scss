@@ -16,6 +16,11 @@
             @include fontInter;
             display: flex;
             align-items: center;
+            transition: 0.5s ease-in-out;
+
+            &:hover{
+                color: $black2 !important;
+            }
         }
     }
     .movies-grid {
@@ -32,4 +37,19 @@
             grid-template-columns: 1fr;
         }
     }
+
+    .movie-card {
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        img{
+            transition: 0.5s ease-in-out;
+
+            &:hover{
+                transform: scale(1.02);
+            }
+        }
+    }
+
+
 }

@@ -11,12 +11,18 @@ const MovieCard = ({ movie }) => {
   return (
     <Card className="movie-card">
       <div className="cardWrapper">
-        <div className="imageWrapper">
-          <img src={movie.poster} alt={movie.title} className="movie-poster w-100" />
+        <div className="pc-movie-image-handler">
+          <a className="imageWrapper ratioImageWrapper Ratio_poster">
+            <img
+              src={movie.poster}
+              alt={movie.title}
+              className="movie-poster"
+            />
+          </a>
         </div>
         <Card.Body>
           <Card.Title>{movie.title}</Card.Title>
-          <div className="mb-2 movie-duration">
+          <div className="movie-duration">
             <svg
               width="20"
               height="20"
@@ -41,7 +47,7 @@ const MovieCard = ({ movie }) => {
           </Card.Text>
 
           <div className="buttons">
-            <a className="playBtn" href="/play">
+            <a className="playBtn cardButton" href="/play">
               <div className="iconWrapper">
                 <svg
                   width="12"
@@ -58,56 +64,58 @@ const MovieCard = ({ movie }) => {
               </div>
               Play Trailer
             </a>
-            <a className="moreBtn fw700" href="/more">More Performances</a>
+            <a className="cardButton moreBtn fw700" href="/more">
+              More Performances
+            </a>
           </div>
         </Card.Body>
       </div>
 
       <div className="performance-times">
         <div>
-        {movie.performances.map((performance, index) => (
-          <Button
-            key={index}
-            size="sm"
-            className="me-2 intro fw700 textSmall"
-          >
-            {performance.label}
-          </Button>
-        ))}
+          {movie.performances.map((performance, index) => (
+            <Button
+              key={index}
+              size="sm"
+              className="cardButton intro fw700 textSmall"
+            >
+              {performance.label}
+            </Button>
+          ))}
         </div>
         <div>
-        {movie.qualities?.map((qualitie, index) => (
-          <Button
-            key={index}
-            size="sm"
-            className="me-2 intro fw700 textSmall"
-          >
-            {qualitie.label}   
-          </Button>
-        ))}
+          {movie.qualities?.map((qualitie, index) => (
+            <Button
+              key={index}
+              size="sm"
+              className="cardButton intro fw700 textSmall"
+            >
+              {qualitie.label}
+            </Button>
+          ))}
         </div>
         <div>
-        {movie.lenses?.map((lense, index) => (
-          <Button
-            key={index}
-            variant={lense.isSoldOut ? "out" : "intro"}
-            size="sm"
-            className="me-2 intro fw700 textSmall"
-          >
-            {lense.label}   
-          </Button>
-        ))}
+          {movie.lenses?.map((lense, index) => (
+            <Button
+              key={index}
+              variant={lense.isSoldOut ? "out" : "intro"}
+              size="sm"
+              className="cardButton intro fw700 textSmall"
+            >
+              {lense.label}
+            </Button>
+          ))}
         </div>
         <div>
-        {movie.times?.map((time, index) => (
-          <Button
-            key={index}
-            size="sm"
-            className="me-2 color fw700 textSmall"
-          >
-            {time.label}   
-          </Button>
-        ))}
+          {movie.times?.map((time, index) => (
+            <Button
+              key={index}
+              size="sm"
+              className="cardButton color fw700 textSmall"
+            >
+              {time.label}
+            </Button>
+          ))}
         </div>
       </div>
     </Card>
@@ -125,19 +133,13 @@ const MovieList = () => {
       country: "USA",
       year: "2023",
       poster: asteroid,
-      performances: [
-        { label: "4K | Intro", isSoldOut: false },
-      ],
-      qualities: [
-        { label: "4K", isSoldOut: false },
-      ],
+      performances: [{ label: "4K | Intro", isSoldOut: false }],
+      qualities: [{ label: "4K", isSoldOut: false }],
       lenses: [
         { label: "35mm", isSoldOut: false },
         { label: "35mm", isSoldOut: false },
       ],
-      times: [
-        { label: "3:30 PM", isSoldOut: false },
-      ],
+      times: [{ label: "3:30 PM", isSoldOut: false }],
     },
     {
       title: "Gloria",
@@ -148,12 +150,8 @@ const MovieList = () => {
       country: "USA",
       year: "1980",
       poster: gloria,
-      performances: [
-     
-      ],
-      qualities: [
-        { label: "4K", isSoldOut: false },
-      ],
+      performances: [],
+      qualities: [{ label: "4K", isSoldOut: false }],
       lenses: [
         { label: "sold out", isSoldOut: true },
         { label: "35mm", isSoldOut: false },

@@ -51,6 +51,10 @@ h4{
   font-size: #{$font54}rem !important;
 }
 
+.textMediumXl {
+  font-size: #{$font20}rem !important;
+}
+
 .textMedium {
   font-size: #{$font18}rem !important;
 }
@@ -73,4 +77,10 @@ h4{
 
 .fcWhite{
   color: $white1;
+}
+
+// font family
+
+.fontSatoshi{
+  @include fontSatoshi;
 }
